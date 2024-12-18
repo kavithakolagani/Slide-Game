@@ -1,0 +1,59 @@
+
+:root{
+    --width: 400px;
+    --boardWidth: 500px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: hidden;
+}
+.game{
+    width: var(--boardWidth);
+    height: 500px;
+    margin:auto;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.slider{
+    visibility: hidden;
+    background-color:purple;
+    height: 20px;
+    width: 100px;
+    position: relative;
+}
+#slider1{
+    visibility: visible;
+}
+.animate{
+    animation: side 4s infinite linear;
+}
+@keyframes side{
+    0%{left:0px}
+    50%{left:var(--width)}
+    100%{left:0px}
+}
+
+
+button{
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+}
+#btn{
+    background-color: rgb(238, 144, 144);
+}
+#btn:hover, #restart:hover{
+    background-color: rgb(255, 0, 111); 
+}
+#btn:active, #restart:active{
+    background-color: rgb(0, 255, 234);
+}
+#restart{
+    background-color: rgb(0, 255, 81);
+    display: none;
+}
